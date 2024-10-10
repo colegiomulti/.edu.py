@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autores del Colegio</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Animate.css para animaciones CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- AOS para animaciones on-scroll -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+    <!-- CSS personalizado -->
+    <style>
+        body {
+            background-color: #1c1c1c;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            overflow-x: hidden;
+            transition: background-color 2s ease-in-out;
+        }
+
+        .heading {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #ff4b5c;
+            text-align: center;
+            margin: 40px 0;
+            opacity: 0;
+            animation: fadeInDown 1.5s forwards;
+        }
+
+        .author-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            border: none;
+            margin-bottom: 30px;
+            background-color: #2a2a2a;
+            border-radius: 20px;
+            overflow: hidden;
+            padding: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .author-card.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .author-card:hover {
+            transform: scale(1.08);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+        }
+
+        .author-img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            transition: transform 0.5s ease;
+            margin: 0 auto;
+        }
+
+        .author-card:hover .author-img {
+            transform: scale(1.15);
+        }
+
+        .author-info {
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        .author-info h4 {
+            color: #ff4b5c;
+            margin-bottom: 10px;
+        }
+
+        .author-info p {
+            font-size: 1rem;
+            color: #ccc;
+        }
+
+        .bio {
+            font-style: italic;
+        }
+
+        .btn-back-to-top {
+            display: inline-block;
+            padding: 12px 20px;
+            background-color: #ff4b5c;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: bold;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+            margin-top: 20px;
+            animation: blink-animation 1.5s infinite;
+        }
+
+        .btn-back-to-top:hover {
+            background-color: #e43e4d;
+            transform: translateY(-3px);
+        }
+
+        @keyframes blink-animation {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.6;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+            font-size: 2.5rem;
+        }
+
+        h1.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Transición suave para el botón de inicio */
+        .btn-back-to-top.blink {
+            animation: blink-animation 1.5s infinite;
+        }
+
+        .glowing-text {
+            color: #fff;
+            position: relative;
+            background: linear-gradient(90deg, #8B0000, #FF6347, #ff4b5c, #8B0000);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: shine 3s linear infinite;
+        }
+
+        @keyframes shine {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            100% {
+                background-position: 200% 50%;
+            }
+        }
+
+               /* Ajustes para pantallas más grandes */
+@media (min-width: 380px) {
+    .content-wrapper h1 {
+        font-size: 2.5rem; /* Ajusta el tamaño en pantallas grandes */
+    }
+
+    .content-wrapper h2 {
+        font-size: 1rem; /* Ajusta el tamaño en pantallas grandes */
+    }
+}
+
+@media (min-width: 486px) {
+    .content-wrapper h1 {
+        font-size: 2.8rem; /* Ajusta el tamaño en pantallas grandes */
+    }
+
+    .content-wrapper h2 {
+        font-size: 1.5rem; /* Ajusta el tamaño en pantallas grandes */
+    }
+}
+@media (min-width: 700px) {
+    .content-wrapper h1 {
+        font-size: 2.9rem; /* Ajusta el tamaño en pantallas grandes */
+    }
+
+    .content-wrapper h2 {
+        font-size: 1.8rem; /* Ajusta el tamaño en pantallas grandes */
+    }
+}
+@media (min-width: 723px) {
+    .content-wrapper h1 {
+        font-size: 3rem; /* Ajusta el tamaño en pantallas grandes */
+    }
+
+    .content-wrapper h2 {
+        font-size: 1.9rem; /* Ajusta el tamaño en pantallas grandes */
+    }
+}
+@media (min-width: 748px) {
+    .content-wrapper h1 {
+        font-size: 3.1rem; /* Ajusta el tamaño en pantallas grandes */
+    }
+
+    .content-wrapper h2 {
+        font-size: 1.9rem; /* Ajusta el tamaño en pantallas grandes */
+    }
+}
+
+@media (min-width: 768px) {
+    .content-wrapper h1 {
+        font-size: 3rem; /* Ajusta el tamaño en pantallas grandes */
+    }
+
+    .content-wrapper h2 {
+        font-size: 1rem; /* Ajusta el tamaño en pantallas grandes */
+    }
+}
+@media (min-width: 800px) {
+    .content-wrapper h1 {
+        font-size: 3.1rem; /* Ajusta el tamaño en pantallas grandes */
+    }
+
+    .content-wrapper h2 {
+        font-size: 1.2rem; /* Ajusta el tamaño en pantallas grandes */
+    }
+}
+@media (min-width: 1100px) {
+    .content-wrapper h1 {
+        font-size: 3.2rem; /* Ajusta el tamaño en pantallas grandes */
+    }
+
+    .content-wrapper h2 {
+        font-size: 1.3rem; /* Ajusta el tamaño en pantallas grandes */
+    }
+}
+    </style>
+</head>
+
+<body>
+    <div class="container py-5">
+        <h1 class="heading glowing-text" data-aos="fade-down">Conoce a los Autores</h1>
+
+        <div class="row">
+            <!-- Autor 1 -->
+            <div class="col-md-4" data-aos="zoom-in">
+                <div class="card author-card text-center">
+                    <img src="img/IMG_20240926_193622.jpg" alt="Autor 1" class="author-img">
+                    <div class="card-body author-info">
+                        <h4>Blás Acosta</h4>
+                        <p class="specialidad">Egresado Bachillerato Técnico En Informática</p>
+                        <p class="bio">Aquí va una breve biografía del autor 1. Un pequeño resumen sobre su trayectoria, intereses, etc.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Autor 2 -->
+            <div class="col-md-4" data-aos="zoom-in">
+                <div class="card author-card text-center">
+                    <img src="img/jessi.jpg" alt="Autor 2" class="author-img">
+                    <div class="card-body author-info">
+                        <h4>Jessica Vera</h4>
+                        <p class="specialidad">Egresada Bachillerato Técnico En Informática</p>
+                        <p class="bio">Aquí va una breve biografía del autor 2. Un pequeño resumen sobre su trayectoria, intereses, etc.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Autor 3 -->
+            <div class="col-md-4" data-aos="zoom-in">
+                <div class="card author-card text-center">
+                    <img src="img/Dalma.jpg" alt="Autor 3" class="author-img">
+                    <div class="card-body author-info">
+                        <h4>Dalma Almada</h4>
+                        <p class="specialidad">Egresada Bachillerato Técnico En Informática</p>
+                        <p class="bio">18 años. Estudios Básicos Escuela Básica N° 201 Tte Gabriel Aquino - Colegio Nacional EMD Dr Raúl Peña. Continuación de estudio en el área de Ingeniería Industrial</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Autor 4 -->
+            <div class="row justify-content-center">
+                <div class="col-md-4" data-aos="zoom-in">
+                    <div class="card author-card text-center">
+                        <img src="img/elvira.jpg" alt="Autor 4" class="author-img">
+                        <div class="card-body author-info">
+                            <h4>Elvira Gómez</h4>
+                            <p class="specialidad">Egresada Bachillerato Técnico En Informática</p>
+                            <p class="bio">Aquí va una breve biografía del autor 4. Un pequeño resumen sobre su trayectoria, intereses, etc.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4" data-aos="zoom-in">
+                    <div class="card author-card text-center">
+                        <img src="img/candia.jpg" alt="Autor 5" class="author-img">
+                        <div class="card-body author-info">
+                            <h4>Fabrizio Candia</h4>
+                            <p class="specialidad">Egresado Bachillerato Técnico En Informática</p>
+                            <p class="bio">17 años. Estudios Básicos Escuela Priv. Sub. Cristo Rey - Colegio Parroquial John F. Kennedy. Continuación de estudio en el área de Ciencias Veterinarias.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botón de Volver al Inicio -->
+            <div class="text-center py-4">
+                <a href="../index.html" class="btn-back-to-top" id="backToTop">Volver al Inicio</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- JavaScript para scroll suave y animaciones adicionales -->
+    <script>
+       AOS.init();
+console.log('AOS Initialized');  // Mensaje de prueba
+
+// Observer para mostrar las tarjetas con animaciones
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            console.log('Tarjeta visible:', entry.target);  // Mensaje de prueba
+            entry.target.classList.add('show');
+        }
+    });
+});
+
+const authorCards = document.querySelectorAll('.author-card');
+authorCards.forEach(card => observer.observe(card));
+
+    </script>
+</body>
+
+</html>

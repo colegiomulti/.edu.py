@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conoce la historia y actividades del Colegio Nacional E.M.D. Dr. Raúl Peña.">
+    <meta name="keywords" content="colegio, educación, bachilleratos, actividades">
+    <title>Nuestra Historia - Proyecto</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Animate.css para animaciones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- Llamar a Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- Animate.css para animaciones -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+<!-- Llamar a Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Estilo personalizado */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #0a0003;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        .navbar-brand img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .navbar-nav .nav-link {
+            color: #e3fae4 !important;
+            padding: 15px 20px;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #ffffff !important;
+        }
+
+        .dropdown-menu {
+            background-color: rgba(10, 0, 3, 0.65);
+            border: none;
+        }
+
+        .dropdown-item {
+            color: #e3fae4 !important;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .dropdown-item:hover {
+            background-color: #0a0003 !important;
+            color: #ffffff !important;
+        }
+
+        /* Estilo del header */
+        header {
+            background-color: #0a0003;
+            color: #e3fae4;
+        }
+
+        .navbar {
+            background-color: #0a0003 !important;
+            transition: background-color 0.5s ease;
+        }
+
+        /* Ajustes para el video de fondo */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        #background-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(75%);
+        }
+        #background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(75%); /* Ajusta este valor para mejorar la apariencia */
+}
+
+
+/* Centrado del contenido principal */
+/* Centrado del contenido principal */
+.content-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        
+
+        .content-wrapper h1, .content-wrapper h2 {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .content-wrapper h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem; /* Ajusta el tamaño para que sea más pequeño */
+    color: #e3fae4;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px; /* Reduce el margen inferior para mejor centrado */
+}
+
+
+
+/* Ajustes para pantallas más grandes */
+@media (min-width: 380px) {
+    .content-wrapper h1 {
+        font-size: 2.5rem; /* Ajusta el tamaño en pantallas grandes */
+    }
+
+    .content-wrapper h2 {
+        font-size: 1rem; /* Ajusta el tamaño en pantallas grandes */
+    }
+}
+
+@media (min-width: 486px) {
+    .content-wrapper h1 {
+        font-size: 2.8rem; /* Ajusta el tamaño en pantallas grandes */
+    }
+
+    .content-wrapper h2 {
+        font-size: 1.5rem; /* Ajusta el tamaño en pantallas grandes */
+    }
+}
+@media (min-width: 700px) {
+    .content-wrapper h1 {
+        font-size: 2.9rem; /* Ajusta el tamaño en pantallas grandes */
+    }
+
+    .content-wrapper h2 {
+        font-size: 1.8rem; /* Ajusta el tamaño en pantallas grandes */
+    }
+}
+@media (min-width: 723px) {
+    .content-wrapper h1 {
+        font-size: 3rem; /* Ajusta el tamaño en pantallas grandes */
+    }
+
+    .content-wrapper h2 {
+        font-size: 1.9rem; /* Ajusta el tamaño en pantallas grandes */
+    }
+}
+@media (min-width: 748px) {
+    .content-wrapper h1 {
+        font-size: 3.1rem; /* Ajusta el tamaño en pantallas grandes */
+    }
+
+    .content-wrapper h2 {
+        font-size: 1.9rem; /* Ajusta el tamaño en pantallas grandes */
+    }
+}
+
+@media (min-width: 768px) {
+    .content-wrapper h1 {
+        font-size: 3rem; /* Ajusta el tamaño en pantallas grandes */
+    }
+
+    .content-wrapper h2 {
+        font-size: 1rem; /* Ajusta el tamaño en pantallas grandes */
+    }
+}
+@media (min-width: 800px) {
+    .content-wrapper h1 {
+        font-size: 3.1rem; /* Ajusta el tamaño en pantallas grandes */
+    }
+
+    .content-wrapper h2 {
+        font-size: 1.2rem; /* Ajusta el tamaño en pantallas grandes */
+    }
+}
+@media (min-width: 1100px) {
+    .content-wrapper h1 {
+        font-size: 3.2rem; /* Ajusta el tamaño en pantallas grandes */
+    }
+
+    .content-wrapper h2 {
+        font-size: 1.3rem; /* Ajusta el tamaño en pantallas grandes */
+    }
+}
+
+
+
+
+        /* Pie de página */
+        footer {
+            background-color: #0a0003;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+            line-height: 1.5;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            opacity: 0;
+            animation: fadeIn 2s forwards 1.5s;
+        }
+
+        footer p {
+            margin-bottom: 0;
+        }
+
+        footer a {
+            color: #e3fae4;
+        }
+
+        footer a:hover {
+            color: #ffffff;
+        }
+
+        /* Animaciones */
+        @keyframes fadeInDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Responsivo */
+        @media (min-width: 768px) {
+            .content-wrapper h1 {
+                font-size: 4.5rem;
+            }
+
+            .content-wrapper h2 {
+                font-size: 2.5rem;
+            }
+        }
+     
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand">
+                <img src="Usuario/img/logo.jpg" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <!-- Menús desplegables -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Nuestro Colegio</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                            <li><a class="dropdown-item" href="Usuario/NuestroColegio/historia.php">Historia</a></li>
+                            <li><a class="dropdown-item" href="Usuario/NuestroColegio/equipodirectivo.php">Cuerpo Directivo</a></li>
+                            <li><a class="dropdown-item" href="Usuario/NuestroColegio/equipodocente.php">Cuerpo Docente</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Actividades</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                            <li><a class="dropdown-item" href="Usuario/Actividades/curriculares.php">Curriculares</a></li>
+                            <li><a class="dropdown-item" href="Usuario/Actividades/extracurriculares.php">Extracurriculares</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Menú Bachilleratos -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Bachilleratos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                            <li><a class="dropdown-item" href="Usuario/Bachilleratos/cienciasbasicas.php">Ciencias Básicas</a></li>
+                            <li><a class="dropdown-item" href="Usuario/Bachilleratos/sociales.php">Ciencias Sociales</a></li>
+                            <li><a class="dropdown-item" href="Usuario/Bachilleratos/artesyletras.php">Artes y Letras</a></li>
+                            <li><a class="dropdown-item" href="Usuario/Bachilleratos/administracion.php">Administración</a></li>
+                            <li><a class="dropdown-item" href="Usuario/Bachilleratos/contabilidad.php">Contabilidad</a></li>
+                            <li><a class="dropdown-item" href="Usuario/Bachilleratos/disenografico.php">Diseño Gráfico y Publicidad</a></li>
+                            <li><a class="dropdown-item" href="Usuario/Bachilleratos/electricidad.php">Electricidad</a></li>
+                            <li><a class="dropdown-item" href="Usuario/Bachilleratos/informatica.php">Informática</a></li>
+                            <li><a class="dropdown-item" href="Usuario/Bachilleratos/mecatronica.php">Mecátronica</a></li>
+                            <li><a class="dropdown-item" href="Usuario/Bachilleratos/mecanicagral.php">Mecánica General</a></li>
+                            <li><a class="dropdown-item" href="Usuario/Bachilleratos/mecanicaautomotriz.php">Mecánica Automotriz</a></li>
+                            <li><a class="dropdown-item" href="Usuario/Bachilleratos/salud.php">Salud</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"></li>
+                        <a class="nav-link" href="Usuario/requisitos.html">Requisitos</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="Usuario/contacto.php">Contacto</a>
+                    </li>
+                      
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Fondo de video -->
+    <div class="video-background">
+        <video autoplay loop muted plays-inline id="background-video">
+            <source src="Usuario/img/video_multi.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    
+    
+    <!-- Contenido central -->
+    <div class="content-wrapper">
+        <div class="content">
+            <h1 class="glowing-text animate__animated animate__fadeInDown">Colegio Nacional De E.M.D. Dr. Raúl Peña</h1>
+            <h2 class="animate__animated animate__fadeInUp">Historia y Valores que Trascienden</h2>
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; Colegio Nacional de E.M.D. Dr. Raúl Peña</p>
+        <p class="autor"><a href="Usuario/autores.html">Autores</a></p>
+
+    </footer>
+
+    <!-- JavaScript para desplazamiento suave -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <!-- Llamar a Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
